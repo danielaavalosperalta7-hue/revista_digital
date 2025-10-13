@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Ocupa toda la ventana */
+    text-align: center;
+    background: #d2a26a;
+
+    background-image: url("img/cute2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header-txt h1 {
+    font-size: 90px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+}
+
+.header-txt p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    background: #cf6c15;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.btn-1:hover {
+    background: #e6a87c;
+}
