@@ -136,35 +136,33 @@ img {
    CONTENIDO DEL HEADER
    ============================================ */
 
-
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex: 1;
-    padding: 0 100px;
-    gap: 50px;
+    padding: 0 50px;
+    gap: 30px;
 }
 
 .header-img {
-    flex-basis: 50%;
-    text-align: center;
+    flex-basis: 55%; /* Más espacio para la imagen */
 }
+
+.header-txt {
+    flex-basis: 45%; /* Menos espacio para el texto */
+}
+
 .header-img img {
     width: 100%;
-    max-width: 700px; /* Aumenta esto */
+    max-width: 650px;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
-.header-img img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+
+
+
 }
 
 .header-img img:hover {
