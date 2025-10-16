@@ -1,6 +1,12 @@
+/* ============================================
+   IMPORTACIÓN DE FUENTES
+   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
+/* ============================================
+   ESTILOS GLOBALES
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +17,21 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden;
+    line-height: 1.7;
+    color: #333;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ============================================
+   HEADER DE BIENVENIDA
+   ============================================ */
 .header {
     display: flex;
     justify-content: center;
@@ -26,21 +44,25 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .header-content {
     width: 100%;
     max-width: 1200px;
-    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-txt {
     width: 100%;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .header-txt h1 {
-    font-size: clamp(45px, 8vw, 95px); /* Tamaño adaptable */
+    font-size: clamp(40px, 7vw, 85px);
     text-transform: uppercase;
     line-height: 1.1;
     color: rgb(255, 255, 255);
@@ -50,14 +72,20 @@ body {
     letter-spacing: 3px;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .header-txt p {
-    font-size: clamp(16px, 3vw, 20px);
+    font-size: clamp(16px, 2.5vw, 20px);
     margin-bottom: 30px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* ============================================
+   BOTONES
+   ============================================ */
 .btn-1 {
     display: inline-block;
     padding: 14px 35px;
@@ -67,11 +95,13 @@ body {
     border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: clamp(14px, 2.5vw, 16px);
+    font-size: clamp(13px, 2vw, 16px);
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.4s ease;
     box-shadow: 0 5px 20px rgba(207, 108, 21, 0.4);
+    max-width: 280px;
+    width: 100%;
 }
 
 .btn-1:hover {
@@ -80,35 +110,106 @@ body {
     background: linear-gradient(135deg, #e89a5f 0%, #cf6c15 100%);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991px) {
     .header {
-        padding: 40px 15px;
+        padding: 60px 20px;
+    }
+    
+    .header-txt {
+        padding: 15px;
     }
     
     .header-txt h1 {
+        font-size: clamp(35px, 8vw, 70px);
         letter-spacing: 2px;
-    }
-    
-    .btn-1 {
-        padding: 12px 25px;
-        letter-spacing: 1px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        padding: 30px 10px;
-    }
-    
-    .header-txt h1 {
-        letter-spacing: 1px;
         margin-bottom: 20px;
     }
     
     .btn-1 {
+        padding: 13px 30px;
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 50px 15px;
+        min-height: 90vh;
+    }
+    
+    .header-txt {
+        padding: 10px;
+    }
+    
+    .header-txt h1 {
+        font-size: clamp(32px, 9vw, 60px);
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+    
+    .header-txt p {
+        font-size: clamp(15px, 3vw, 18px);
+        margin-bottom: 25px;
+    }
+    
+    .btn-1 {
+        padding: 12px 28px;
+        letter-spacing: 1.5px;
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 40px 10px;
+        min-height: 85vh;
+    }
+    
+    .header-content {
+        padding: 0 10px;
+    }
+    
+    .header-txt {
+        padding: 5px;
+    }
+    
+    .header-txt h1 {
+        font-size: clamp(28px, 10vw, 50px);
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        word-break: break-word;
+    }
+    
+    .header-txt p {
+        font-size: clamp(14px, 3.5vw, 16px);
+        margin-bottom: 20px;
+    }
+    
+    .btn-1 {
+        padding: 11px 25px;
+        letter-spacing: 1px;
+        max-width: 220px;
+        width: 85%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        padding: 30px 8px;
+    }
+    
+    .header-txt h1 {
+        font-size: clamp(25px, 11vw, 45px);
+        letter-spacing: 0.5px;
+    }
+    
+    .btn-1 {
         padding: 10px 20px;
-        width: 80%;
-        max-width: 250px;
+        max-width: 200px;
+        width: 90%;
     }
 }
