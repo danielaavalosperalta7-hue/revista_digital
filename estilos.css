@@ -37,7 +37,7 @@ body {
 }
 
 .header-txt {
-    width: 100%;
+    width: 900%;
 }
 
 .header-txt h1 {
@@ -46,7 +46,7 @@ body {
     line-height: 1.1;
     color: rgb(255, 255, 255);
     font-family: 'Playfair Display', serif;
-    font-weight: 10;
+    font-weight: 900;
     margin-bottom: 25px;
     letter-spacing: 3px;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
