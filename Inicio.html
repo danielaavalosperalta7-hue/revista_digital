@@ -3,15 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Revista estilo de vida</title>
-        <link rel="stylesheet" href="estilo.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Revista estilo de vida - Lumina</title>
+        <link rel="stylesheet" href="estilo.css"> 
         
-        <!-- Driver.js CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css"/>
         
         <style>
-            /* Botón Tour en el menú de navegación */
+            /* ESTILOS ESPECÍFICOS PARA EL BOTÓN Y POPUP DEL TOUR (MANTENIDOS) */
             .tour-nav-button {
                 display: inline-block;
                 padding: 10px 20px;
@@ -40,7 +39,6 @@
                 font-size: 18px;
             }
             
-            /* Ajuste para el contenedor del menú */
             .menu .navbar ul {
                 display: flex;
                 align-items: center;
@@ -82,7 +80,7 @@
                 transform: scale(1.05);
             }
             
-            /* Responsive para móvil */
+            /* Ajuste responsive para el botón del tour en móvil */
             @media(max-width:991px) {
                 .tour-nav-button {
                     display: block;
@@ -121,11 +119,7 @@
                 </div>
                 <div class="header-txt" id="texto-bienvenida">
                     <h1>BIENVENIDOS</h1>
-                    <p>Un espacio creado para ti, donde el bienestar, la cultura y 
-                        el entretenimiento se unen en un solo lugar. Aquí encontrarás
-                        información confiable, artículos inspiradores 
-                        y contenidos que aportan valor a tu vida cotidiana. 
-                        ¡Explora, aprende y disfruta con nosotros!</p>
+                    <p>Un espacio creado para ti, donde el bienestar, la cultura y el entretenimiento se unen en un solo lugar. Aquí encontrarás información confiable, artículos inspiradores y contenidos que aportan valor a tu vida cotidiana. ¡Explora, aprende y disfruta con nosotros!</p>
                 </div>
             </div>
         </header>
@@ -143,23 +137,21 @@
                 <div class="link" id="footer-redes">
                     <h3>RED SOCIAL</h3>
                     <ul>
-                        <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==" target="_blank">Instagram</a></li>
                     </ul>
                 </div>
                 <div class="link" id="footer-whatsapp">
                     <h3>CONTACTAME</h3>
                     <ul>
-                        <li><a href="https://wa.me/71681290">71681290</a></li>
+                        <li><a href="https://wa.me/71681290" target="_blank">71681290</a></li>
                     </ul>
                 </div>
             </div>
         </footer>
         
-        <!-- Driver.js JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
         
         <script>
-            // Configuración del tour
             const driver = window.driver.js.driver;
             
             const driverObj = driver({
@@ -179,118 +171,36 @@
                         element: '#navegacion',
                         popover: {
                             title: 'Menú de Navegación 🧭',
-                            description: 'Usa este menú para explorar nuestras tres secciones principales. También puedes volver a iniciar este tour en cualquier momento desde el botón "Tour".',
-                            side: "bottom",
-                            align: 'center'
-                        }
-                    },
-                    {
-                        element: '#menu-salud',
-                        popover: {
-                            title: 'Salud y Bienestar 🧘',
-                            description: 'Descubre consejos prácticos para cuidar tu mente y cuerpo. Aprende a priorizar tu descanso, conectar con el presente y expresar tus emociones de forma saludable.',
-                            side: "bottom",
-                            align: 'start'
-                        }
-                    },
-                    {
-                        element: '#menu-peliculas',
-                        popover: {
-                            title: 'Reseñas de Películas 🎬',
-                            description: 'Explora reseñas de películas inspiradoras como "En busca de la felicidad", "Billy Elliot" y "La vida es bella". Historias que tocan el corazón y enseñan valiosas lecciones.',
-                            side: "bottom",
-                            align: 'center'
-                        }
-                    },
-                    {
-                        element: '#menu-arte',
-                        popover: {
-                            title: 'Arte y Cultura 🎨',
-                            description: 'Sumérgete en el mundo del arte con análisis detallados de obras maestras como "La noche estrellada" de Van Gogh y "El grito" de Munch.',
+                            description: 'Usa este menú para explorar rápidamente nuestras secciones principales: Salud, Películas y Arte.',
                             side: "bottom",
                             align: 'end'
-                        }
-                    },
-                    {
-                        element: '#imagen-bienvenida',
-                        popover: {
-                            title: 'Contenido Visual 📸',
-                            description: 'Cada sección incluye imágenes cuidadosamente seleccionadas para enriquecer tu experiencia y hacer el contenido más atractivo.',
-                            side: "left",
-                            align: 'center'
                         }
                     },
                     {
                         element: '#texto-bienvenida',
                         popover: {
-                            title: 'Nuestra Misión 💡',
-                            description: 'LUMINA es un espacio donde el bienestar, la cultura y el entretenimiento se unen para aportar valor a tu vida cotidiana. Queremos inspirarte y acompañarte en tu crecimiento personal.',
-                            side: "right",
-                            align: 'center'
-                        }
-                    },
-                    {
-                        element: '#footer-contenido',
-                        popover: {
-                            title: 'Accesos Rápidos ⚡',
-                            description: 'En el pie de página encontrarás enlaces rápidos a todas nuestras secciones para facilitar tu navegación.',
-                            side: "top",
+                            title: 'Te damos la bienvenida',
+                            description: 'Esta es la zona de bienvenida. Aquí resumimos la esencia de nuestra revista. ¡Esperamos que te inspire!',
+                            side: "left",
                             align: 'start'
                         }
                     },
                     {
-                        element: '#footer-redes',
+                        element: '#footer-contacto',
                         popover: {
-                            title: 'Síguenos en Redes 📱',
-                            description: 'Conéctate con nosotros en Instagram para más contenido exclusivo, actualizaciones y material inspirador.',
+                            title: 'Contáctanos y Síguenos 📲',
+                            description: 'En el pie de página encontrarás enlaces directos a nuestras redes sociales, formas de contacto y el índice de contenido.',
                             side: "top",
                             align: 'center'
                         }
-                    },
-                    {
-                        element: '#footer-whatsapp',
-                        popover: {
-                            title: '¡Contáctanos! 💬',
-                            description: 'Si tienes preguntas, sugerencias o quieres compartir tus ideas, no dudes en escribirnos por WhatsApp. ¡Nos encantaría saber de ti!',
-                            side: "top",
-                            align: 'end'
-                        }
-                    },
-                    {
-                        popover: {
-                            title: '¡Tour Completado! 🎉',
-                            description: '¡Perfecto! Ya conoces todas las secciones de LUMINA. Ahora puedes comenzar a explorar y disfrutar del contenido. Recuerda que puedes volver a ver este tour haciendo clic en el botón "Tour" del menú.',
-                        }
                     }
-                ],
-                nextBtnText: 'Siguiente →',
-                prevBtnText: '← Anterior',
-                doneBtnText: '¡Comenzar!',
-                progressText: '{{current}} de {{total}}',
-                onDestroyStarted: () => {
-                    driverObj.destroy();
-                }
+                ]
             });
             
-            // Iniciar el tour automáticamente la primera vez
-            window.addEventListener('load', () => {
-                // Verificar si es la primera visita
-                const tourCompleted = localStorage.getItem('tourCompleted');
-                if (!tourCompleted) {
-                    setTimeout(() => {
-                        driverObj.drive();
-                        localStorage.setItem('tourCompleted', 'true');
-                    }, 1500);
-                }
-            });
-            
-            // Botón para iniciar el tour manualmente
-            document.getElementById('start-tour').addEventListener('click', (e) => {
-                e.preventDefault();
+            document.getElementById('start-tour').addEventListener('click', () => {
                 driverObj.drive();
             });
         </script>
         
-        <script src="script.js"></script>
     </body>
 </html>
