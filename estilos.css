@@ -81,7 +81,7 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 168px) {
     .header {
         padding: 40px 15px;
     }
