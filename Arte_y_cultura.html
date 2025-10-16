@@ -4,101 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte y Cultura - Lumina</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title> Arte y cultura</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENÚ -->
-    <div class="menu">
-        <div class="logo-container">
-            <a href="Inicio.html" class="logo">lumina</a>
-        </div>
-        <input type="checkbox" id="menu">
-        <label for="menu" class="menu-label">☰</label>
-        <nav class="navbar">
-            <ul>
-                <li><a href="Inicio.html">Inicio</a></li>
-                <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
-                <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
-                <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-img">
-                    <img src="img/arte-cover.jpg" alt="Arte y Cultura">
-                </div>
-                <div class="header-txt">
-                    <h1>Arte y Cultura</h1>
-                    <p>Explora expresiones artísticas que enriquecen el alma.</p>
-                    <a href="#contenido" class="btn-1">Explorar</a>
-                </div>
+        <div class="menu container">
+            <a href="index.html" class="logo">LUMINA</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                    <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
+                    <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="img/arterev.jpg" alt>
             </div>
+            <div class="header-txt">
+                <h1>ARTE Y CULTURA</h1>
+           <!-- Botón para volver al menú -->
+<button class="btn-volver" onclick="window.location.href='index.html'">
+   Volver al Menú
+</button>
+</div>
+            </div>
+        </header>
+<section class="contenido4">
+            <div class="contenido4__container container">
+                <div class="contenido4__texts">
+                    <h2 class="subtitle">La noche estrellada" - Vincent van Gogh (1889)</h2>
+                    <p class="contenido4__paragraph">Una de las obras más emblemáticas del posimpresionismo, 
+                        "La noche estrellada" muestra un cielo nocturno en turbulencia sobre el pueblo de Saint-Rémy-de-Provence, 
+                        pintado desde la ventana del hospital psiquiátrico donde Van Gogh estaba internado. 
+                        Sus espirales luminosas y pinceladas enérgicas no solo capturan la belleza del universo,
+                         sino también el caos interior del artista. 
+                        Es una pintura cargada de emoción,
+                         intensidad y un sentido casi espiritual de la naturaleza.</p>
+                </div>
+
+                <figure class="contenido4__picture">
+                    <img src="img/nocheestrellada.jpg" class="contenido4__img" width="500">
+                </figure>
+            </div>
+        </section>
+            </div>
+            <section class="contenido5">
+            <div class="contenido5__container container">
+                <div class="contenido5__texts">
+                    <h2 class="subtitle">El grito" - Edvard Munch (1893)</h2>
+                    <p class="contenido5__paragraph">"El grito" es una imagen universal del miedo,
+                         la ansiedad y la desesperación. En esta obra expresionista,
+                          una figura andrógina grita o escucha un grito mientras el cielo parece arder al fondo.
+                           Munch escribió que se inspiró en un paseo donde “el cielo se volvió rojo sangre”
+                            y sintió “un grito infinito
+                            atravesar la naturaleza”.
+                         El uso de color y forma transmite una emoción pura y brutal
+                          que sigue siendo relevante en la era moderna.</p>
+                </div>
+
+                <figure class="contenido5__picture">
+                    <img src="img/ElGrito.jpg" class="contenido5__img" width="500">
+                </figure>
+            </div>
+        </section>
         </div>
     </header>
-
-    <!-- CONTENIDO ARTE -->
-    <main id="contenido">
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-text">
-                        <h2>La Importancia del Arte en la Sociedad</h2>
-                        <p>El arte es una expresión universal que trasciende barreras culturales.</p>
-                    </div>
-                    <div class="content-img">
-                        <img src="img/arte1.jpg" alt="Arte en la Sociedad">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-img">
-                        <img src="img/arte2.jpg" alt="Tradiciones Culturales">
-                    </div>
-                    <div class="content-text">
-                        <h2>Tradiciones Culturales a través del Arte</h2>
-                        <p>Cada cultura posee tradiciones artísticas únicas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-text">
-                        <h2>El Arte como Forma de Sanación</h2>
-                        <p>El arte es una poderosa herramienta de sanación emocional.</p>
-                    </div>
-                    <div class="content-img">
-                        <img src="img/arte3.jpg" alt="Arte y Sanación">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-link">
-                    <h3>Contenido</h3>
-                    <ul>
-                        <li><a href="Inicio.html">Inicio</a></li>
-                        <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
-                        <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
-                        <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content container">
+            <div class="link">
+                <h3>CONTENIDO</h3>
+                <ul>
+                    <li><a href="#">Salud y bienestar</a></li>
+                    <li><a href="#">Reseñas de peliculas</a></li>
+                    <li><a href="#">Arte y cultura</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>RED SOCIAL</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
+                    
+                </ul>
+            </div>
+            <div class="link">
+                <h3>CONTACTAME</h3>
+                <ul>
+                    <li><a href="https://wa.me/71681290">71681290</a></li>
+                </ul>
             </div>
         </div>
     </footer>
