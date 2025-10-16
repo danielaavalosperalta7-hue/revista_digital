@@ -169,7 +169,7 @@ img {
 
 .header-txt {
     flex: 1 1 45%;
-    min-width: 280px;
+    min-width: 80px;
     text-align: center;
     padding: 20px;
 }
