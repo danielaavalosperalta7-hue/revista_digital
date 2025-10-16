@@ -175,12 +175,12 @@ img {
 }
 
 .header-txt h1 {
-    font-size: clamp(40px, 6vw, 5px);
+    font-size: clamp(40px, 6vw, 85px);
     text-transform: uppercase;
     line-height: 1.2;
     color: #2c2c2c;
     font-family: 'Playfair Display', serif;
-    font-weight: 900;
+    font-weight: 100;
     margin-bottom: 20px;
     letter-spacing: 3px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
