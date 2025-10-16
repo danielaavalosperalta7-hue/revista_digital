@@ -1,60 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salud y Bienestar - Lumina</title>
-  <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-  <!-- MENÚ -->
-  <div class="menu">
-    <div class="logo-container"><a href="Inicio.html" class="logo">lumina</a></div>
-    <input type="checkbox" id="menu" />
-    <label for="menu" class="menu-label">☰</label>
-    <nav class="navbar">
-      <ul>
-        <li><a href="Inicio.html">Inicio</a></li>
-        <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
-        <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
-        <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
-      </ul>
-    </nav>
-  </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salud y bienestar - LUMINA</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu container">
+                <div class="logo-container">
+                    <a href="Inicio.html" class="enlace">
+                        <img src="img/logo.jpg" alt="Logo LUMINA" class="logito">
+                    </a>
+                    <a href="Inicio.html" class="logo">Lumina</a>
+                </div>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="menu">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                        <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
+                        <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-content container">
+                <div class="header-img">
+                    <img src="img/saludrev.jpg" alt="Salud y Bienestar">
+                </div>
+                <div class="header-txt">
+                    <h1>SALUD Y BIENESTAR</h1>
+                    <button class="btn-volver" onclick="window.location.href='Inicio.html'">
+                        Volver al Menú
+                    </button>
+                </div>
+            </div>
+        </header>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="header-img">
-          <img src="img/saludrev.jpg" alt="Salud y Bienestar" />
-        </div>
-        <div class="header-txt">
-          <h1>Salud y Bienestar</h1>
-          <p>Descubre consejos prácticos para mejorar tu bienestar físico y mental.</p>
-          <a href="#consejos" class="btn-1">Ver Consejos</a>
-        </div>
-      </div>
-    </div>
-  </header>
+        <main class="product container" id="list-1">
+            <h2>CONSEJOS</h2>
+            <div class="product-content">
+                <div class="product">
+                    <div class="product-txt">
+                        <h3>Cuida tus pensamientos</h3>
+                        <p>Practica la autocompasión: háblate con amabilidad,
+                            como lo harías con un buen amigo.
+                            Detecta y cuestiona los pensamientos negativos
+                            automáticos: pregúntate si son realmente ciertos o
+                            si hay otra forma de ver la situación.
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-txt">
+                        <h3>Prioriza tu descanso y energía</h3>
+                        <p>Duerme lo suficiente (7-9 horas).</p>
+                        <p>Dedica tiempo a descansar sin sentir culpa.</p>
+                        <p>Haz pausas durante el día para respirar
+                            profundamente y relajarte.</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-txt">
+                        <h3>Mantén conexiones sociales</h3>
+                        <p>Haz ejercicio regularmente (caminar, bailar,
+                            estirarte... lo que disfrutes).
+                            Mantén una alimentación balanceada que te haga
+                            sentir bien.
+                            Evita el exceso de sustancias como alcohol o
+                            cafeína, que pueden afectar el ánimo.
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-txt">
+                        <h3>Organiza tu tiempo</h3>
+                        <p>Aprende a decir "no" cuando lo necesites.
+                            Establece metas pequeñas y realistas.
+                            Reserva momentos para actividades que te aporten
+                            alegría o calma (leer, pintar, escuchar música,
+                            etc.).
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-txt">
+                        <h3>Conecta con el presente</h3>
+                        <p>Practica técnicas de atención plena (mindfulness,
+                            meditación, respiración consciente).
+                            Pasea al aire libre, observa la naturaleza,
+                            desconéctate de pantallas por un rato.
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-txt">
+                        <h3>Expresa lo que sientes</h3>
+                        <p>Escribe un diario o notas sobre tus emociones.
+                            Usa el arte o la música como vías para expresar lo
+                            que no sabes poner en palabras.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-  <!-- CONSEJOS -->
-  <main class="product container" id="consejos">
-    <h2>Consejos Prácticos</h2>
-    <div class="product-content">
-      <!-- Tarjetas de consejos como en tu código original -->
-    </div>
-  </main>
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="link">
+                    <h3>CONTENIDO</h3>
+                    <ul>
+                        <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                        <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
+                        <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>RED SOCIAL</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>CONTACTAME</h3>
+                    <ul>
+                        <li><a href="https://wa.me/71681290">71681290</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- Footer links como en tu código original -->
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
