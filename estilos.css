@@ -1,89 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Global */
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
-
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
+/* Bienvenida */
 .header-welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #d2a26a;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), #d2a26a;
+  text-align: center;
 }
-
 .welcome-content {
-    max-width: 800px;
-    width: 100%;
+  padding: 30px 15px;
 }
-
 .welcome-txt h1 {
-    font-size: clamp(2.5rem, 8vw, 5.5rem);
-    color: #fff;
-    margin-bottom: 20px;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  text-transform: uppercase;
 }
-
 .welcome-txt p {
-    font-size: clamp(1rem, 3vw, 1.3rem);
-    margin-bottom: 30px;
-    color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: rgba(255,255,255,0.95);
 }
-
-/* Botón */
 .btn-1 {
-    padding: 14px 35px;
-    background: linear-gradient(135deg, #cf6c15 0%, #e89a5f 100%);
-    color: #fff;
-    border-radius: 30px;
-    font-weight: 700;
-    transition: all 0.4s ease;
-    cursor: pointer;
+  display: inline-block;
+  padding: 14px 35px;
+  background: linear-gradient(135deg, #cf6c15, #e89a5f);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.4s ease;
 }
 
-.btn-1:hover {
-    background: linear-gradient(135deg, #e89a5f 0%, #cf6c15 100%);
+/* Menú */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #c4833d;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: white;
+}
+.menu-label {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+#menu {
+  display: none;
+}
+.navbar {
+  display: flex;
+}
+.navbar ul {
+  display: flex;
+  gap: 0;
+}
+.navbar ul li a {
+  padding: 15px 20px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-welcome {
-        min-height: 90vh;
-    }
-
-    .welcome-content {
-        padding: 30px 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header-welcome {
-        padding: 10px;
-    }
-
-    .welcome-txt h1 {
-        margin-bottom: 15px;
-    }
-
-    .welcome-txt p {
-        margin-bottom: 25px;
-    }
+/* Responsive */
+@media (max-width: 991px) {
+  .menu-label {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #c4833d;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  #menu:checked ~ .navbar {
+    max-height: 500px;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar ul li a {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
 }
