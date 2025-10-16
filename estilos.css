@@ -21,152 +21,69 @@ img {
     display: block;
 }
 
-/* ============================================
-HEADER BIENVENIDA
-============================================ */
-
 .header-welcome {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #d2a26a;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 20px;
     text-align: center;
 }
 
 .welcome-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     max-width: 800px;
     width: 100%;
 }
 
 .welcome-txt h1 {
     font-size: clamp(2.5rem, 8vw, 5.5rem);
-    text-transform: uppercase;
-    line-height: 1.1;
-    color: rgb(255, 255, 255);
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
+    color: #fff;
     margin-bottom: 20px;
-    letter-spacing: 3px;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .welcome-txt p {
     font-size: clamp(1rem, 3vw, 1.3rem);
     margin-bottom: 30px;
     color: rgba(255, 255, 255, 0.95);
-    font-weight: 300;
-    letter-spacing: 1px;
 }
 
-/* ============================================
-BOTÓN
-============================================ */
-
+/* Botón */
 .btn-1 {
-    display: inline-block;
     padding: 14px 35px;
     background: linear-gradient(135deg, #cf6c15 0%, #e89a5f 100%);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    color: #fff;
     border-radius: 30px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    letter-spacing: 2px;
-    text-transform: uppercase;
     transition: all 0.4s ease;
-    box-shadow: 0 5px 20px rgba(207, 108, 21, 0.4);
-    border: none;
     cursor: pointer;
 }
 
 .btn-1:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(207, 108, 21, 0.6);
     background: linear-gradient(135deg, #e89a5f 0%, #cf6c15 100%);
 }
 
-.btn-1:active {
-    transform: translateY(-1px);
-}
-
-/* ============================================
-RESPONSIVE DESIGN - TABLET
-============================================ */
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .header-welcome {
         min-height: 90vh;
-        padding: 15px;
     }
 
     .welcome-content {
         padding: 30px 15px;
     }
-
-    .welcome-txt h1 {
-        letter-spacing: 2px;
-    }
-
-    .btn-1 {
-        padding: 12px 30px;
-    }
 }
-
-/* ============================================
-RESPONSIVE DESIGN - MÓVIL
-============================================ */
 
 @media (max-width: 576px) {
     .header-welcome {
-        min-height: 100vh;
         padding: 10px;
     }
 
-    .welcome-content {
-        padding: 20px 10px;
-        justify-content: center;
-    }
-
     .welcome-txt h1 {
-        letter-spacing: 1px;
         margin-bottom: 15px;
     }
 
     .welcome-txt p {
         margin-bottom: 25px;
-    }
-
-    .btn-1 {
-        padding: 11px 28px;
-        font-size: 0.85rem;
-    }
-}
-
-/* ============================================
-RESPONSIVE DESIGN - MÓVIL EXTRA PEQUEÑO
-============================================ */
-
-@media (max-width: 400px) {
-    .header-welcome {
-        min-height: 100vh;
-    }
-
-    .welcome-txt h1 {
-        letter-spacing: 0.5px;
-    }
-
-    .btn-1 {
-        padding: 10px 24px;
-        font-size: 0.8rem;
     }
 }
