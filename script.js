@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuCheckbox = document.getElementById('menu');
     const navLinks = document.querySelectorAll('.navbar a');
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (menuCheckbox.checked) {
-                menuCheckbox.checked = false;
-            }
+    if (menuCheckbox && navLinks.length > 0) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (menuCheckbox.checked) {
+                    menuCheckbox.checked = false;
+                }
+            });
         });
-    });
-
+    }
+    
     // Smooth scroll para enlaces internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    
     // Añadir clase active al enlace actual
     const currentLocation = window.location.pathname.split('/').pop();
     const menuItems = document.querySelectorAll('.navbar a');
@@ -36,13 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
             item.classList.add('active');
         }
     });
-
+    
     // Animación de entrada para elementos
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
+    
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-
+    
     // Observar elementos que queremos animar
     const animatedElements = document.querySelectorAll('.product, .contenido__container, .contenido2__container, .contenido3__container, .contenido4__container, .contenido5__container');
     
@@ -61,12 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
-
+    
     // Prevenir zoom accidental en iOS
     document.addEventListener('gesturestart', function (e) {
         e.preventDefault();
     });
-
+    
     // Log de bienvenida
     console.log('%c¡Bienvenido a LUMINA! ✨', 'color: #c47535; font-size: 20px; font-weight: bold;');
     console.log('%cRevista digital de estilo de vida', 'color: #666; font-size: 14px;');
