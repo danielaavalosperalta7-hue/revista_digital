@@ -136,12 +136,17 @@ img {
    CONTENIDO DEL HEADER
    ============================================ */
 
+/* ============================================
+   CONTENIDO DEL HEADER
+   ============================================ */
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex: 1;
-    padding: 0 200px;
+    padding: 0 100px;
+    gap: 50px;
 }
 
 .header-img {
@@ -149,9 +154,23 @@ img {
     text-align: center;
 }
 
+.header-img img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.header-img img:hover {
+    transform: scale(1.02);
+}
+
 .header-txt {
     flex-basis: 50%;
     text-align: center;
+    padding: 0 20px;
 }
 
 .header-txt h1 {
