@@ -1,206 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Revista estilo de vida - Lumina</title>
-        <link rel="stylesheet" href="estilos.css"> 
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css"/>
-        
-        <style>
-            /* ESTILOS ESPECÍFICOS PARA EL BOTÓN Y POPUP DEL TOUR (MANTENIDOS) */
-            .tour-nav-button {
-                display: inline-block;
-                padding: 10px 20px;
-                background: linear-gradient(135deg, #ff8c42 0%, #ffb347 100%);
-                color: white;
-                border: 2px solid white;
-                border-radius: 25px;
-                font-size: 16px;
-                font-weight: 700;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                margin-left: 20px;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                box-shadow: 0 3px 10px rgba(255, 140, 66, 0.3);
-            }
-            
-            .tour-nav-button:hover {
-                background: linear-gradient(135deg, #ffb347 0%, #ff8c42 100%);
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(255, 140, 66, 0.5);
-            }
-            
-            .tour-nav-button::before {
-                content: "🎯 ";
-                font-size: 18px;
-            }
-            
-            .menu .navbar ul {
-                display: flex;
-                align-items: center;
-            }
-            
-            /* Personalización de Driver.js */
-            .driver-popover {
-                background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
-                border-radius: 15px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-                max-width: 400px;
-            }
-            
-            .driver-popover-title {
-                font-size: 22px;
-                font-weight: 700;
-                color: #c47535;
-                font-family: 'Playfair Display', serif;
-            }
-            
-            .driver-popover-description {
-                font-size: 16px;
-                line-height: 1.6;
-                color: #333;
-            }
-            
-            .driver-popover-footer button {
-                background: #c47535;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 8px;
-                font-weight: 600;
-                transition: all 0.3s ease;
-            }
-            
-            .driver-popover-footer button:hover {
-                background: #e89a5f;
-                transform: scale(1.05);
-            }
-            
-            /* Ajuste responsive para el botón del tour en móvil */
-            @media(max-width:991px) {
-                .tour-nav-button {
-                    display: block;
-                    width: 90%;
-                    margin: 10px auto;
-                    text-align: center;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <header class="header">
-            <div class="menu container" id="menu-principal">
-                <div class="logo-container">
-                    <a href="#" class="enlace">
-                        <img src="img/logo.jpg" alt="Logo LUMINA" class="logito">
-                    </a>
-                    <a href="Inicio.html" class="logo" id="logo-lumina">Lumina</a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Revista Estilo de Vida</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENÚ -->
+    <div class="menu">
+        <div class="logo-container">
+            <a href="Inicio.html" class="logo">lumina</a>
+        </div>
+        <input type="checkbox" id="menu">
+        <label for="menu" class="menu-label">☰</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
+                <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
+                <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- HEADER PRINCIPAL -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-img">
+                    <img src="img/hero-image.jpg" alt="Bienvenida Lumina">
                 </div>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="img/menu.png" class="menu-icono" alt="menu">
-                </label>
-                <nav class="navbar" id="navegacion">
-                    <ul>
-                        <li><a href="Salud_y_bienestar.html" id="menu-salud">Salud y bienestar</a></li>
-                        <li><a href="Reseñas_de_peliculas.html" id="menu-peliculas">Reseñas de peliculas</a></li>
-                        <li><a href="Arte_y_cultura.html" id="menu-arte">Arte y cultura</a></li>
-                        <li><button class="tour-nav-button" id="start-tour">Tour</button></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header-content container">
-                <div class="header-img" id="imagen-bienvenida">
-                    <img src="img/home.jpg" alt="Imagen de bienvenida">
-                </div>
-                <div class="header-txt" id="texto-bienvenida">
-                    <h1>BIENVENIDOS</h1>
-                    <p>Un espacio creado para ti, donde el bienestar, la cultura y el entretenimiento se unen en un solo lugar. Aquí encontrarás información confiable, artículos inspiradores y contenidos que aportan valor a tu vida cotidiana. ¡Explora, aprende y disfruta con nosotros!</p>
+                <div class="header-txt">
+                    <h1>Bienvenidos a Lumina</h1>
+                    <p>Descubre historias que transforman vidas. Explora contenido sobre salud, cine, arte y mucho más.</p>
+                    <a href="#salud" class="btn-1">Explorar Ahora</a>
                 </div>
             </div>
-        </header>
-        
-        <footer class="footer" id="footer-contacto">
-            <div class="footer-content container">
-                <div class="link" id="footer-contenido">
-                    <h3>CONTENIDO</h3>
+        </div>
+    </header>
+
+    <!-- SECCIÓN SALUD -->
+    <section class="section" id="salud">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2>Salud y Bienestar</h2>
+                    <p>Cuida tus pensamientos: Practica la autocompasión y háblate con amabilidad, como lo harías con un buen amigo.</p>
+                    <p>Prioriza tu descanso: Duerme lo suficiente (7-9 horas) y dedica tiempo a descansar sin sentir culpa.</p>
+                    <p>Mantén conexiones sociales: Haz ejercicio regularmente y mantén una alimentación balanceada.</p>
+                    <a href="Salud_y_bienestar.html" class="btn-1">Leer Más</a>
+                </div>
+                <div class="content-img">
+                    <img src="img/salud-thumb.jpg" alt="Salud y Bienestar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONSEJOS -->
+    <section class="product">
+        <div class="container">
+            <h2>Consejos Destacados</h2>
+            <div class="product-content">
+                <div class="product-card">
+                    <h3>Cuida tus Pensamientos</h3>
+                    <p>Practica la autocompasión y detecta pensamientos negativos. Cuestiona si son realmente ciertos.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Prioriza tu Descanso</h3>
+                    <p>Duerme 7-9 horas, dedica tiempo a descansar sin culpa y haz pausas durante el día.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Conexiones Sociales</h3>
+                    <p>Mantén relaciones significativas y participa en actividades comunitarias regularmente.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Organiza tu Tiempo</h3>
+                    <p>Aprende a decir "no", establece metas realistas y reserva momentos para ti.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Conecta con el Presente</h3>
+                    <p>Practica mindfulness, medita y desconéctate de pantallas por un tiempo.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Expresa tus Sentimientos</h3>
+                    <p>Escribe un diario o usa el arte como vía para expresar emociones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PELÍCULAS -->
+    <section class="section" id="peliculas">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-img">
+                    <img src="img/pelicula1.jpg" alt="En Busca de la Felicidad">
+                </div>
+                <div class="content-text">
+                    <h2>Reseñas de Películas</h2>
+                    <p>En Busca de la Felicidad (2006): La historia de Chris, un hombre que lucha por salir adelante con su pequeño hijo en San Francisco.</p>
+                    <p>Billy Elliot (2000): Un niño descubre su pasión por el ballet en una comunidad minera, desafiando las expectativas tradicionales.</p>
+                    <p>La Vida es Bella (1997): Un aclamado drama italiano sobre el amor, sacrificio y la esperanza en tiempos de guerra.</p>
+                    <a href="Reseñas_de_peliculas.html" class="btn-1">Leer Reseñas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ARTE -->
+    <section class="section" id="arte">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2>Arte y Cultura</h2>
+                    <p>Explora expresiones artísticas que enriquecen el alma. El arte es una forma poderosa de comunicar emociones y conectar con otros.</p>
+                    <p>Descubre cómo diferentes culturas expresan su identidad a través del arte, la música y las tradiciones.</p>
+                    <p>Desde pintura hasta danza, encuentra inspiración en las manifestaciones culturales del mundo.</p>
+                    <a href="Arte_y_cultura.html" class="btn-1">Explorar Arte</a>
+                </div>
+                <div class="content-img">
+                    <img src="img/arte-thumb.jpg" alt="Arte y Cultura">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-link">
+                    <h3>Contenido</h3>
                     <ul>
-                        <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
-                        <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
-                        <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                        <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
+                        <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
+                        <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
                     </ul>
                 </div>
-                <div class="link" id="footer-redes">
-                    <h3>RED SOCIAL</h3>
+                <div class="footer-link">
+                    <h3>Redes Sociales</h3>
                     <ul>
-                        <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/daniela_avalos_03">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="link" id="footer-whatsapp">
-                    <h3>CONTACTAME</h3>
+                <div class="footer-link">
+                    <h3>Contacto</h3>
                     <ul>
-                        <li><a href="https://wa.me/71681290" target="_blank">71681290</a></li>
+                        <li><a href="https://wa.me/591">+591 71681290</a></li>
                     </ul>
                 </div>
             </div>
-        </footer>
-        
-        <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
-        
-        <script>
-            const driver = window.driver.js.driver;
-            
-            const driverObj = driver({
-                showProgress: true,
-                showButtons: ['next', 'previous', 'close'],
-                steps: [
-                    {
-                        element: '#logo-lumina',
-                        popover: {
-                            title: '¡Bienvenido a LUMINA! ✨',
-                            description: 'Esta es tu revista digital de estilo de vida. Aquí encontrarás contenido inspirador y enriquecedor sobre bienestar, cultura y entretenimiento.',
-                            side: "bottom",
-                            align: 'start'
-                        }
-                    },
-                    {
-                        element: '#navegacion',
-                        popover: {
-                            title: 'Menú de Navegación 🧭',
-                            description: 'Usa este menú para explorar rápidamente nuestras secciones principales: Salud, Películas y Arte.',
-                            side: "bottom",
-                            align: 'end'
-                        }
-                    },
-                    {
-                        element: '#texto-bienvenida',
-                        popover: {
-                            title: 'Te damos la bienvenida',
-                            description: 'Esta es la zona de bienvenida. Aquí resumimos la esencia de nuestra revista. ¡Esperamos que te inspire!',
-                            side: "left",
-                            align: 'start'
-                        }
-                    },
-                    {
-                        element: '#footer-contacto',
-                        popover: {
-                            title: 'Contáctanos y Síguenos 📲',
-                            description: 'En el pie de página encontrarás enlaces directos a nuestras redes sociales, formas de contacto y el índice de contenido.',
-                            side: "top",
-                            align: 'center'
-                        }
-                    }
-                ]
-            });
-            
-            document.getElementById('start-tour').addEventListener('click', () => {
-                driverObj.drive();
-            });
-        </script>
-        
-    </body>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
