@@ -56,10 +56,13 @@ img {
     margin-left: 8px;
 }
 .logo{
-     font-size: 30px;
+    font-size: 35px;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 2px;
+}
 }
 /*AQUI TERMINA PARA EL LOGO DE LA IMAGEN*/
 
