@@ -1,139 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reseñas de peliculas</title>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="menu container">
-                <a href="index.html" class="logo"> lumina</a>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="img/menu.png" class="menu-icono" alt="menu">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="Salud_y_bienestar.html">Salud y
-                                bienestar</a></li>
-                        <li><a href="Reseñas_de_peliculas.html">Reseñas de
-                                peliculas</a></li>
-                        <li><a href="Arte_y_cultura.html">Arte y
-                                cultura</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header-content container">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas de Películas - Lumina</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENÚ -->
+    <div class="menu">
+        <div class="logo-container">
+            <a href="Inicio.html" class="logo">lumina</a>
+        </div>
+        <input type="checkbox" id="menu">
+        <label for="menu" class="menu-label">☰</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
+                <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
+                <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
                 <div class="header-img">
-                    <img src="img/pelisrev.jpg" alt>
+                    <img src="img/pelisrev.jpg" alt="Reseñas de Películas">
                 </div>
                 <div class="header-txt">
-                    <h1>RESEÑAS Y PELICULAS</h1>
-             <!-- Botón para volver al menú -->
-<button class="btn-volver" onclick="window.location.href='index.html'">
-   Volver al Menú
-</button>
-
+                    <h1>Reseñas de Películas</h1>
+                    <p>Descubre películas inspiradoras que tocan el alma y transforman perspectivas.</p>
+                    <a href="#peliculas" class="btn-1">Ver Reseñas</a>
                 </div>
             </div>
-        </header>
- <!--aqui INICIA los CONTENIDOS -->
-        </section>
-        <section class="contenido">
-            <div class="contenido__container container">
-                <div class="contenido__texts">
-                    <h2 class="subtitle">En busca de la felicidad. (2006)</h2>
-                    <p class="contenido__paragraph">La película nos muestra la ardua 
-                        lucha de Chris, un hombre que busca salir adelante con su pequeño 
-                        hijo en las calles de San Francisco en la década de 1980. 
-                        A lo largo de la historia se van presentando dificultades que la 
-                        pequeña familia tiene que sobrellevar.
-                        La película trata sobre nunca perder las esperanzas ni dejar de 
-                        luchar por un futuro mejor.</p>
-                </div>
+        </div>
+    </header>
 
-                <figure class="contenido__picture">
-                    <img src="./img/pelicula1.jpg" class="contenido__img">
-                </figure>
-            </div>
-        </section>
-
-        <section class="contenido2">
-            <div class="contenido2__container container">
-                <figure class="contenido2__picture">
-                    <img src="./img/pelicula2.jpg" class="contenido__img">
-                </figure>
-                <div class="contenido2__texts">
-                    <h2 class="subtitle">Billy Elliot (2000)</h2>
-                    <p class="contenido2__paragraph">La película es un conmovedor drama
-                         que narra la historia de Billy, un niño de 11 años que crece en
-                          una comunidad minera en Inglaterra durante la huelga de mineros
-                           de 1984. Mientras su padre y hermano luchan por sobrevivir, 
-                           Billy descubre su pasión por el ballet, un interés que desafía 
-                           las expectativas tradicionales de su familia y su entorno. 
-                        Con el apoyo de su profesora de ballet, Billy persigue su sueño
-                         de convertirse en bailarín.La película retrata lo que es la lucha
-                          por la aceptación, el valor de perseguir los sueños y como el 
-                          arte puede ser un símbolo de libertad y esperanza.</p>
+    <!-- SECCIÓN DE PELÍCULAS -->
+    <main id="peliculas">
+        <!-- PELÍCULA 1 -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>En Busca de la Felicidad (2006)</h2>
+                        <p>La película nos muestra la ardua lucha de Chris, un hombre que busca salir adelante con su pequeño hijo en las calles de San Francisco en la década de 1980.</p>
+                        <p>A lo largo de la historia se van presentando dificultades que la pequeña familia tiene que sobrellevar. La película trata sobre nunca perder las esperanzas ni dejar de luchar por un futuro mejor.</p>
+                        <p>Una historia inspiradora de resiliencia y amor paternal que te recordará la importancia de perseverar.</p>
+                    </div>
+                    <div class="content-img">
+                        <img src="img/pelicula1.jpg" alt="En Busca de la Felicidad">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="contenido3">
-            <div class="contenido3__container container">
-                <figure class="contenido3__picture">
-                    <img src="img/La vida es bella.jpg" class="contenido__img">
-                </figure>
-                <div class="contenido3__texts">
-                    <h2 class="subtitle">La vida es bella (1997) </h2>
-                    <p class="contenido3__paragraph">Es un aclamado drama italiano que cuenta la historia de Guido, 
-                        un hombre alegre y optimista, que conquista a la mujer que ama y forma una familia con ella. 
-                        Sin embargo, con la llegada de la Segunda Guerra Mundial, Guido,
-                         su esposa e hijo son deportados a un campo de concentración nazi por ser judíos. 
-A pesar de el horror que los rodea, Guido hace todo lo posible por proteger a su hijo de la dura realidad,
- haciendo pasar todo por un inocente juego con la promesa de que el premio será un tanque real.</p>
-
+        <!-- PELÍCULA 2 -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-img">
+                        <img src="img/pelicula2.jpg" alt="Billy Elliot">
+                    </div>
+                    <div class="content-text">
+                        <h2>Billy Elliot (2000)</h2>
+                        <p>La película es un conmovedor drama que narra la historia de Billy, un niño de 11 años que crece en una comunidad minera en Inglaterra durante la huelga de mineros de 1984.</p>
+                        <p>Mientras su padre y hermano luchan por sobrevivir, Billy descubre su pasión por el ballet, un interés que desafía las expectativas tradicionales de su familia y su entorno.</p>
+                        <p>La película retrata la lucha por la aceptación, el valor de perseguir los sueños y cómo el arte puede ser un símbolo de libertad y esperanza.</p>
+                    </div>
                 </div>
-
             </div>
-
         </section>
-        <!--aqui termina los CONTENIDOS -->
 
-        <footer class="footer">
-            <div class="footer-content container">
+        <!-- PELÍCULA 3 -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>La Vida es Bella (1997)</h2>
+                        <p>Es un aclamado drama italiano que cuenta la historia de Guido, un hombre alegre y optimista, que conquista a la mujer que ama y forma una familia con ella.</p>
+                        <p>Sin embargo, con la llegada de la Segunda Guerra Mundial, Guido, su esposa e hijo son deportados a un campo de concentración nazi por ser judíos.</p>
+                        <p>A pesar del horror que los rodea, Guido hace todo lo posible por proteger a su hijo de la dura realidad, haciendo pasar todo por un inocente juego con la promesa de que el premio será un tanque real.</p>
+                        <p>Una historia de amor, sacrificio y la capacidad del espíritu humano para mantener la esperanza.</p>
+                    </div>
+                    <div class="content-img">
+                        <img src="img/pelicula3.jpg" alt="La Vida es Bella">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                <div class="link">
-                    <h3>CONTENIDO</h3>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-link">
+                    <h3>Contenido</h3>
                     <ul>
-                        <li><a href="#">Salud y bienestar</a></li>
-                        <li><a href="#">Reseñas de peliculas</a></li>
-                        <li><a href="#">Arte y cultura</a></li>
+                        <li><a href="Inicio.html">Inicio</a></li>
+                        <li><a href="Salud_y_bienestar.html">Salud y Bienestar</a></li>
+                        <li><a href="Reseñas_de_peliculas.html">Reseñas de Películas</a></li>
+                        <li><a href="Arte_y_cultura.html">Arte y Cultura</a></li>
                     </ul>
                 </div>
-                <div class="link">
-                    <h3>RED SOCIAL</h3>
+                <div class="footer-link">
+                    <h3>Redes Sociales</h3>
                     <ul>
-                        <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
-                      
-                        
+                        <li><a href="https://www.instagram.com/daniela_avalos_03">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="link">
-                    <h3>CONTACTAME</h3>
+                <div class="footer-link">
+                    <h3>Contacto</h3>
                     <ul>
-                        <li><a href="https://wa.me/71681290">71681290</a></li>
+                        <li><a href="https://wa.me/591">+591 71681290</a></li>
                     </ul>
                 </div>
-
             </div>
+        </div>
+    </footer>
 
-        </footer>
-        <!--aqui termina los la parte de abajo -->
-
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
