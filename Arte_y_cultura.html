@@ -89,6 +89,28 @@
             color: #555;
         }
         
+        .museum-info a {
+            color: #c47535;
+            font-weight: 600;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        .museum-info a:hover {
+            color: #e89a5f;
+        }
+        
+        .art-image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .art-image-container img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
         @media (max-width: 768px) {
             .subcategory-buttons {
                 flex-direction: column;
@@ -176,157 +198,166 @@
             <p><strong>Reflexión:</strong> Cuando todo se derrumba, tenemos la oportunidad de descubrir quiénes somos realmente.</p>
         </div>
     </section>
+
     <!-- SECCIÓN ARTE -->
-<section class="content-section" id="arte">
-    <section class="contenido4">
-        <div class="contenido4__container container">
-            <div class="contenido4__texts">
-                <h2 class="subtitle">La Noche Estrellada</h2>
-                <p class="book-author">Vincent van Gogh (1889)</p>
-                <p class="contenido4__paragraph"><strong>Técnica:</strong> Óleo sobre lienzo | <strong>Ubicación:</strong> Museo de Arte Moderno (MoMA), Nueva York</p>
-                <p class="contenido4__paragraph">Una de las obras más emblemáticas del posimpresionismo. Muestra un cielo nocturno en turbulencia sobre el pueblo de Saint-Rémy-de-Provence, pintado desde la ventana del hospital psiquiátrico donde Van Gogh estaba internado.</p>
-                <p class="contenido4__paragraph"><strong>Reflexión:</strong> Las espirales luminosas y pinceladas enérgicas capturan tanto la belleza del universo como el caos interior del artista. Nos enseña que incluso en los momentos más oscuros, podemos encontrar belleza y expresión. Una obra que transforma la noche en un torbellino de emociones y esperanza luminosa.</p>
+    <section class="content-section" id="arte">
+        <section class="contenido4">
+            <div class="contenido4__container container">
+                <div class="contenido4__texts">
+                    <h2 class="subtitle">La Noche Estrellada</h2>
+                    <p class="book-author">Vincent van Gogh (1889)</p>
+                    <p class="contenido4__paragraph"><strong>Técnica:</strong> Óleo sobre lienzo | <strong>Ubicación:</strong> Museo de Arte Moderno (MoMA), Nueva York</p>
+                    <p class="contenido4__paragraph">Una de las obras más emblemáticas del posimpresionismo. Muestra un cielo nocturno en turbulencia sobre el pueblo de Saint-Rémy-de-Provence, pintado desde la ventana del hospital psiquiátrico donde Van Gogh estaba internado.</p>
+                    <p class="contenido4__paragraph"><strong>Reflexión:</strong> Las espirales luminosas y pinceladas enérgicas capturan tanto la belleza del universo como el caos interior del artista. Nos enseña que incluso en los momentos más oscuros, podemos encontrar belleza y expresión. Una obra que transforma la noche en un torbellino de emociones y esperanza luminosa.</p>
+                </div>
+                <figure class="contenido4__picture">
+                    <img src="img/nocheestrellada.jpg" class="contenido4__img" alt="La noche estrellada">
+                </figure>
             </div>
-            <figure class="contenido4__picture">
-                <img src="img/nocheestrellada.jpg" class="contenido4__img" alt="La noche estrellada">
-            </figure>
+        </section>
+
+        <section class="contenido5">
+            <div class="contenido5__container container">
+                <figure class="contenido5__picture">
+                    <img src="img/ElGrito.jpg" class="contenido5__img" alt="El Grito">
+                </figure>
+                <div class="contenido5__texts">
+                    <h2 class="subtitle">El Grito</h2>
+                    <p class="book-author">Edvard Munch (1893)</p>
+                    <p class="contenido5__paragraph"><strong>Técnica:</strong> Temple, óleo y pastel sobre cartón | <strong>Ubicación:</strong> Galería Nacional y Museo Munch, Oslo</p>
+                    <p class="contenido5__paragraph">Una imagen universal del miedo, la ansiedad y la desesperación. Una figura andrógina grita mientras el cielo parece arder al fondo. Munch se inspiró en un paseo donde sintió un grito infinito atravesar la naturaleza.</p>
+                    <p class="contenido5__paragraph"><strong>Reflexión:</strong> El uso de color y forma transmite una emoción pura y brutal que sigue siendo relevante en la era moderna, representando la angustia existencial que todos experimentamos. Un eco visual del malestar humano que trasciende generaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="product container">
+            <div class="art-card">
+                <h3>Las Meninas</h3>
+                <p class="book-author">Diego Velázquez (1656)</p>
+                <div class="art-image-container">
+                    <img src="img/lasmeninas.jpg" alt="Las Meninas - Velázquez">
+                </div>
+                <p><strong>Técnica:</strong> Óleo sobre lienzo | <strong>Ubicación:</strong> Museo del Prado, Madrid</p>
+                <p>Una obra maestra del Barroco español que no es solo un retrato de la infanta Margarita, sino un enigma visual que juega con la mirada, la perspectiva y el rol del artista. Velázquez se retrata pintando dentro de la escena, y en un espejo al fondo aparecen los reyes.</p>
+                <p><strong>Reflexión:</strong> Una reflexión sofisticada sobre la representación, el poder y el arte mismo. Un cuadro que nos obliga a preguntarnos: ¿a quién estamos realmente mirando?</p>
+            </div>
         </div>
     </section>
 
-    <section class="contenido5">
-        <div class="contenido5__container container">
-            <figure class="contenido5__picture">
-                <img src="img/ElGrito.jpg" class="contenido5__img" alt="El Grito">
-            </figure>
-            <div class="contenido5__texts">
-                <h2 class="subtitle">El Grito</h2>
-                <p class="book-author">Edvard Munch (1893)</p>
-                <p class="contenido5__paragraph"><strong>Técnica:</strong> Temple, óleo y pastel sobre cartón | <strong>Ubicación:</strong> Galería Nacional y Museo Munch, Oslo</p>
-                <p class="contenido5__paragraph">Una imagen universal del miedo, la ansiedad y la desesperación. Una figura andrógina grita mientras el cielo parece arder al fondo. Munch se inspiró en un paseo donde sintió un grito infinito atravesar la naturaleza.</p>
-                <p class="contenido5__paragraph"><strong>Reflexión:</strong> El uso de color y forma transmite una emoción pura y brutal que sigue siendo relevante en la era moderna, representando la angustia existencial que todos experimentamos. Un eco visual del malestar humano que trasciende generaciones.</p>
+    <!-- SECCIÓN MUSEOS -->
+    <section class="product container content-section" id="museos">
+        <h2>MUSEOS EN SANTA CRUZ</h2>
+        
+        <div class="museum-card">
+            <h3>🎨 Museo Artecampo</h3>
+            <p>Especializado en arte originario y popular de las tierras bajas, preserva y exhibe textiles, cerámica, tallado en madera y arte plumario de 14 etnias del oriente boliviano.</p>
+            <div class="museum-info">
+                <p><strong>📍 Dirección:</strong> Calle Libertad esq. Potosí, Santa Cruz de la Sierra</p>
+                <p><strong>🗺️ Ver ubicación:</strong> <a href="https://maps.app.goo.gl/8YzKcF3vxQmWLKYc8" target="_blank">Abrir en Google Maps</a></p>
+                <p><strong>🎯 Destacado:</strong> Artesanía de tejidos y hamacas de comunidades originarias</p>
+                <p><strong>✨ Ideal para:</strong> Conocer expresiones culturales vivas del oriente boliviano</p>
+            </div>
+        </div>
+        
+        <div class="museum-card">
+            <h3>🦎 Museo de Historia Natural Noel Kempff Mercado</h3>
+            <p>Centro científico de referencia en Bolivia, con impresionantes colecciones de flora, fauna y paleontología. Cuenta con más de 50,000 especímenes botánicos y 135,000 insectos.</p>
+            <div class="museum-info">
+                <p><strong>📍 Dirección:</strong> Av. Irala 565, entre calles Ejército Nacional y Potosí</p>
+                <p><strong>🗺️ Ver ubicación:</strong> <a href="https://maps.app.goo.gl/2cB9Z7TkzPfhCXpG6" target="_blank">Abrir en Google Maps</a></p>
+                <p><strong>🎯 Destacado:</strong> Aves, reptiles, mamíferos, peces y fósiles (incluido un megaterio)</p>
+                <p><strong>✨ Ideal para:</strong> Educación ambiental y científica, visitas guiadas especializadas</p>
+            </div>
+        </div>
+        
+        <div class="museum-card">
+            <h3>🖼️ Museo de Arte Contemporáneo</h3>
+            <p>Ubicado en la histórica Casa de los Tres Pavos cerca de la Plaza 24 de Septiembre. Exhibe más de 300 obras de arte boliviano contemporáneo: pintura, escultura y grabado.</p>
+            <div class="museum-info">
+                <p><strong>📍 Dirección:</strong> Calle Sucre No. 32, entre René Moreno y Potosí</p>
+                <p><strong>🗺️ Ver ubicación:</strong> <a href="https://maps.app.goo.gl/YFp8rQmHv3wNJX9c6" target="_blank">Abrir en Google Maps</a></p>
+                <p><strong>🎯 Destacado:</strong> Exposiciones temporales, talleres de arte, Noche de Museos</p>
+                <p><strong>✨ Ideal para:</strong> Amantes del arte contemporáneo y eventos culturales</p>
+            </div>
+        </div>
+        
+        <div class="museum-card">
+            <h3>🏛️ Museo de Historia de Santa Cruz (UAGRM)</h3>
+            <p>Instalado en una elegante casa Art Nouveau (1915-1920). Alberga exposiciones sobre arqueología local, cultura chiquitana y archivo histórico con documentos desde el siglo XIX.</p>
+            <div class="museum-info">
+                <p><strong>📍 Dirección:</strong> Calle Junín No. 154, entre Ayacucho y Potosí</p>
+                <p><strong>🗺️ Ver ubicación:</strong> <a href="https://maps.app.goo.gl/xmYDR5UWKbPn8vz57" target="_blank">Abrir en Google Maps</a></p>
+                <p><strong>🎯 Destacado:</strong> Arquitectura Art Nouveau, biblioteca histórica</p>
+                <p><strong>✨ Ideal para:</strong> Investigadores e interesados en historia regional</p>
+            </div>
+        </div>
+        
+        <div class="museum-card">
+            <h3>📜 Museo de la Independencia</h3>
+            <p>Pequeño pero significativo museo ubicado junto a la Catedral. Presenta documentos, vestuario y objetos de la independencia cruceña en salas temáticas dedicadas al Cabildo y los Gobernadores.</p>
+            <div class="museum-info">
+                <p><strong>📍 Dirección:</strong> Plaza 24 de Septiembre, bajo la Brigada Parlamentaria (al lado de la Catedral)</p>
+                <p><strong>🗺️ Ver ubicación:</strong> <a href="https://maps.app.goo.gl/oJx3hQXEuPR4QGmU6" target="_blank">Abrir en Google Maps</a></p>
+                <p><strong>🎯 Destacado:</strong> Inaugurado en 2010, conmemora el bicentenario del 24 de septiembre</p>
+                <p><strong>✨ Ideal para:</strong> Conocer la historia de la independencia cruceña</p>
+            </div>
+        </div>
+        
+        <div class="museum-card">
+            <h3>🎭 Centro de la Cultura Plurinacional (CCP)</h3>
+            <p>Antiguo edificio bancario adaptado en 2009, funciona como extensión del Museo Nacional de Arte de La Paz. Ofrece una completa agenda cultural con múltiples disciplinas artísticas.</p>
+            <div class="museum-info">
+                <p><strong>📍 Dirección:</strong> Calle René Moreno No. 738, esquina Bolívar</p>
+                <p><strong>🗺️ Ver ubicación:</strong> <a href="https://maps.app.goo.gl/6J7sVHqbRzYfgp7X8" target="_blank">Abrir en Google Maps</a></p>
+                <p><strong>🎯 Destacado:</strong> Artes visuales, teatro, danza, música, biblioteca y talleres</p>
+                <p><strong>✨ Ideal para:</strong> Disfrutar de eventos culturales diversos y exposiciones plurinacionales</p>
             </div>
         </div>
     </section>
 
-    <div class="product container">
-        <div class="art-card">
-            <h3>Las Meninas</h3>
-            <p class="book-author">Diego Velázquez (1656)</p>
-            <p><strong>Técnica:</strong> Óleo sobre lienzo | <strong>Ubicación:</strong> Museo del Prado, Madrid</p>
-            <p>Una obra maestra del Barroco español que no es solo un retrato de la infanta Margarita, sino un enigma visual que juega con la mirada, la perspectiva y el rol del artista. Velázquez se retrata pintando dentro de la escena, y en un espejo al fondo aparecen los reyes.</p>
-            <p><strong>Reflexión:</strong> Una reflexión sofisticada sobre la representación, el poder y el arte mismo. Un cuadro que nos obliga a preguntarnos: ¿a quién estamos realmente mirando?</p>
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>CONTENIDO</h3>
+                <ul>
+                    <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                    <li><a href="Reseñas_de_peliculas.html">Reseñas de películas</a></li>
+                    <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>RED SOCIAL</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>CONTÁCTAME</h3>
+                <ul>
+                    <li><a href="https://wa.me/59171681290">+591 71681290</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- SECCIÓN MUSEOS -->
-<section class="product container content-section" id="museos">
-    <h2>MUSEOS EN SANTA CRUZ</h2>
-    
-    <div class="museum-card">
-        <h3>🎨 Museo Artecampo</h3>
-        <p>Especializado en arte originario y popular de las tierras bajas, preserva y exhibe textiles, cerámica, tallado en madera y arte plumario de 14 etnias del oriente boliviano.</p>
-        <div class="museum-info">
-            <p><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</p>
-            <p><strong>🎯 Destacado:</strong> Artesanía de tejidos y hamacas de comunidades originarias</p>
-            <p><strong>✨ Ideal para:</strong> Conocer expresiones culturales vivas del oriente boliviano</p>
-        </div>
-    </div>
-    
-    <div class="museum-card">
-        <h3>🦎 Museo de Historia Natural Noel Kempff Mercado</h3>
-        <p>Centro científico de referencia en Bolivia, con impresionantes colecciones de flora, fauna y paleontología. Cuenta con más de 50,000 especímenes botánicos y 135,000 insectos.</p>
-        <div class="museum-info">
-            <p><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</p>
-            <p><strong>🎯 Destacado:</strong> Aves, reptiles, mamíferos, peces y fósiles (incluido un megaterio)</p>
-            <p><strong>✨ Ideal para:</strong> Educación ambiental y científica, visitas guiadas especializadas</p>
-        </div>
-    </div>
-    
-    <div class="museum-card">
-        <h3>🖼️ Museo de Arte Contemporáneo</h3>
-        <p>Ubicado en la histórica Casa de los Tres Pavos cerca de la Plaza 24 de Septiembre. Exhibe más de 300 obras de arte boliviano contemporáneo: pintura, escultura y grabado.</p>
-        <div class="museum-info">
-            <p><strong>📍 Ubicación:</strong> Casona del siglo XX, centro de Santa Cruz</p>
-            <p><strong>🎯 Destacado:</strong> Exposiciones temporales, talleres de arte, Noche de Museos</p>
-            <p><strong>✨ Ideal para:</strong> Amantes del arte contemporáneo y eventos culturales</p>
-        </div>
-    </div>
-    
-    <div class="museum-card">
-        <h3>🏛️ Museo de Historia de Santa Cruz (UAGRM)</h3>
-        <p>Instalado en una elegante casa Art Nouveau (1915-1920). Alberga exposiciones sobre arqueología local, cultura chiquitana y archivo histórico con documentos desde el siglo XIX.</p>
-        <div class="museum-info">
-            <p><strong>📍 Ubicación:</strong> Administrado por la Universidad Gabriel René Moreno</p>
-            <p><strong>🎯 Destacado:</strong> Arquitectura Art Nouveau, biblioteca histórica</p>
-            <p><strong>✨ Ideal para:</strong> Investigadores e interesados en historia regional</p>
-        </div>
-    </div>
-    
-    <div class="museum-card">
-        <h3>📜 Museo de la Independencia</h3>
-        <p>Pequeño pero significativo museo ubicado junto a la Catedral. Presenta documentos, vestuario y objetos de la independencia cruceña en salas temáticas dedicadas al Cabildo y los Gobernadores.</p>
-        <div class="museum-info">
-            <p><strong>📍 Ubicación:</strong> Bajo el edificio de la Brigada Parlamentaria</p>
-            <p><strong>🎯 Destacado:</strong> Inaugurado en 2010, conmemora el bicentenario del 24 de septiembre</p>
-            <p><strong>✨ Ideal para:</strong> Conocer la historia de la independencia cruceña</p>
-        </div>
-    </div>
-    
-    <div class="museum-card">
-        <h3>🎭 Centro de la Cultura Plurinacional (CCP)</h3>
-        <p>Antiguo edificio bancario adaptado en 2009, funciona como extensión del Museo Nacional de Arte de La Paz. Ofrece una completa agenda cultural con múltiples disciplinas artísticas.</p>
-        <div class="museum-info">
-            <p><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</p>
-            <p><strong>🎯 Destacado:</strong> Artes visuales, teatro, danza, música, biblioteca y talleres</p>
-            <p><strong>✨ Ideal para:</strong> Disfrutar de eventos culturales diversos y exposiciones plurinacionales</p>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="footer-content container">
-        <div class="link">
-            <h3>CONTENIDO</h3>
-            <ul>
-                <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
-                <li><a href="Reseñas_de_peliculas.html">Reseñas de películas</a></li>
-                <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
-            </ul>
-        </div>
-        <div class="link">
-            <h3>RED SOCIAL</h3>
-            <ul>
-                <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
-            </ul>
-        </div>
-        <div class="link">
-            <h3>CONTÁCTAME</h3>
-            <ul>
-                <li><a href="https://wa.me/59171681290">+591 71681290</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-<script>
-    function showContent(section) {
-        const sections = document.querySelectorAll('.content-section');
-        sections.forEach(s => s.classList.remove('active'));
-        
-        const buttons = document.querySelectorAll('.sub-btn');
-        buttons.forEach(b => b.classList.remove('active'));
-        
-        document.getElementById(section).classList.add('active');
-        event.target.classList.add('active');
-        
-        window.scrollTo({
-            top: document.querySelector('.subcategory-buttons').offsetTop - 100,
-            behavior: 'smooth'
-        });
-    }
-</script>
-<script src="script.js"></script>
+    <script>
+        function showContent(section) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.sub-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(section).classList.add('active');
+            event.target.classList.add('active');
+            
+            window.scrollTo({
+                top: document.querySelector('.subcategory-buttons').offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-````
