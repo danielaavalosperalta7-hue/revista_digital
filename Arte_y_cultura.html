@@ -6,15 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arte y cultura - LUMINA</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+        .subcategory-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+        
+        .sub-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #c47535 0%, #e89a5f 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: clamp(14px, 2vw, 16px);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(196, 117, 53, 0.3);
+        }
+        
+        .sub-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(196, 117, 53, 0.5);
+        }
+        
+        .sub-btn.active {
+            background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+        }
+        
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .book-card, .museum-card, .art-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .book-card h3, .museum-card h3, .art-card h3 {
+            color: #c47535;
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .book-author {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .museum-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .museum-info p {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .subcategory-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .sub-btn {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="menu container">
             <div class="logo-container">
-                <a href="Inicio.html" class="enlace">
+                <a href="index.html" class="enlace">
                     <img src="img/logo.jpg" alt="Logo LUMINA" class="logito">
                 </a>
-                <a href="Inicio.html" class="logo">Lumina</a>
+                <a href="index.html" class="logo">Lumina</a>
             </div>
             <input type="checkbox" id="menu">
             <label for="menu">
@@ -34,24 +129,63 @@
             </div>
             <div class="header-txt">
                 <h1>ARTE Y CULTURA</h1>
-                <button class="btn-volver" onclick="window.location.href='Inicio.html'">
+                <button class="btn-volver" onclick="window.location.href='index.html'">
                     Volver al Menú
                 </button>
             </div>
         </div>
     </header>
 
+    <div class="subcategory-buttons">
+        <button class="sub-btn active" onclick="showContent('libros')">Libros Inspiradores</button>
+        <button class="sub-btn" onclick="showContent('arte')">Obras de Arte</button>
+        <button class="sub-btn" onclick="showContent('museos')">Museos en Santa Cruz</button>
+    </div>
+
+    <!-- SECCIÓN LIBROS -->
+    <section class="product container content-section active" id="libros">
+        <h2>LIBROS INSPIRADORES</h2>
+        
+        <div class="book-card">
+            <h3>El Principito</h3>
+            <p class="book-author">Antoine de Saint-Exupéry</p>
+            <p>Una obra maestra que va más allá de ser un cuento infantil. A través de la historia de un pequeño príncipe que viaja por diferentes planetas, el autor nos invita a reflexionar sobre la amistad, el amor, la soledad y lo verdaderamente importante en la vida.</p>
+            <p><strong>Reflexión:</strong> Nos recuerda que debemos ver con el corazón y valorar las cosas simples que realmente importan: las relaciones humanas, la autenticidad y la capacidad de asombrarnos como niños.</p>
+        </div>
+        
+        <div class="book-card">
+            <h3>El Alquimista</h3>
+            <p class="book-author">Paulo Coelho</p>
+            <p>La historia de Santiago, un joven pastor que emprende un viaje en busca de su leyenda personal. A través de su travesía por el desierto, descubre verdades profundas sobre la vida, el destino y la importancia de seguir nuestros sueños.</p>
+            <p><strong>Reflexión:</strong> Nos inspira a perseguir nuestros sueños con valentía, recordándonos que el universo conspira a nuestro favor cuando seguimos nuestro corazón y que el viaje es tan importante como el destino.</p>
+        </div>
+        
+        <div class="book-card">
+            <h3>El Arte de No Amargarse la Vida</h3>
+            <p class="book-author">Rafael Santandreu</p>
+            <p><strong>Tema:</strong> Psicología cognitiva, gestión de pensamientos, bienestar emocional.</p>
+            <p>Este libro se basa en la psicología cognitiva para enseñarnos cómo los pensamientos distorsionados generan sufrimiento innecesario. Con un lenguaje accesible y ejemplos cotidianos, Santandreu muestra cómo cambiar nuestros esquemas mentales puede mejorar profundamente nuestra calidad de vida emocional.</p>
+            <p><strong>Mensaje clave:</strong> No es lo que nos pasa, sino cómo interpretamos lo que nos pasa, lo que determina nuestra felicidad.</p>
+        </div>
+        
+        <div class="book-card">
+            <h3>Cuando Todo Se Derrumba</h3>
+            <p class="book-author">Pema Chödrön</p>
+            <p><strong>Tema:</strong> Mindfulness, compasión, afrontamiento del dolor emocional.</p>
+            <p>Con profunda sabiduría budista adaptada al mundo occidental, esta monja tibetana enseña cómo enfrentar los momentos de crisis desde la presencia, la amabilidad y la aceptación del sufrimiento. Es especialmente útil para quienes atraviesan momentos difíciles.</p>
+            <p><strong>Reflexión:</strong> Cuando todo se derrumba, tenemos la oportunidad de descubrir quiénes somos realmente.</p>
+        </div>
+    </section>
+    <!-- SECCIÓN ARTE -->
+<section class="content-section" id="arte">
     <section class="contenido4">
         <div class="contenido4__container container">
             <div class="contenido4__texts">
-                <h2 class="subtitle">La noche estrellada - Vincent van Gogh (1889)</h2>
-                <p class="contenido4__paragraph">Una de las obras más emblemáticas del posimpresionismo, 
-                    "La noche estrellada" muestra un cielo nocturno en turbulencia sobre el pueblo de Saint-Rémy-de-Provence, 
-                    pintado desde la ventana del hospital psiquiátrico donde Van Gogh estaba internado. 
-                    Sus espirales luminosas y pinceladas enérgicas no solo capturan la belleza del universo,
-                     sino también el caos interior del artista. 
-                    Es una pintura cargada de emoción,
-                     intensidad y un sentido casi espiritual de la naturaleza.</p>
+                <h2 class="subtitle">La Noche Estrellada</h2>
+                <p class="book-author">Vincent van Gogh (1889)</p>
+                <p class="contenido4__paragraph"><strong>Técnica:</strong> Óleo sobre lienzo | <strong>Ubicación:</strong> Museo de Arte Moderno (MoMA), Nueva York</p>
+                <p class="contenido4__paragraph">Una de las obras más emblemáticas del posimpresionismo. Muestra un cielo nocturno en turbulencia sobre el pueblo de Saint-Rémy-de-Provence, pintado desde la ventana del hospital psiquiátrico donde Van Gogh estaba internado.</p>
+                <p class="contenido4__paragraph"><strong>Reflexión:</strong> Las espirales luminosas y pinceladas enérgicas capturan tanto la belleza del universo como el caos interior del artista. Nos enseña que incluso en los momentos más oscuros, podemos encontrar belleza y expresión. Una obra que transforma la noche en un torbellino de emociones y esperanza luminosa.</p>
             </div>
             <figure class="contenido4__picture">
                 <img src="img/nocheestrellada.jpg" class="contenido4__img" alt="La noche estrellada">
@@ -65,22 +199,134 @@
                 <img src="img/ElGrito.jpg" class="contenido5__img" alt="El Grito">
             </figure>
             <div class="contenido5__texts">
-                <h2 class="subtitle">El grito - Edvard Munch (1893)</h2>
-                <p class="contenido5__paragraph">"El grito" es una imagen universal del miedo,
-                     la ansiedad y la desesperación. En esta obra expresionista,
-                      una figura andrógina grita o escucha un grito mientras el cielo parece arder al fondo.
-                       Munch escribió que se inspiró en un paseo donde "el cielo se volvió rojo sangre"
-                        y sintió "un grito infinito atravesar la naturaleza".
-                     El uso de color y forma transmite una emoción pura y brutal
-                      que sigue siendo relevante en la era moderna.</p>
+                <h2 class="subtitle">El Grito</h2>
+                <p class="book-author">Edvard Munch (1893)</p>
+                <p class="contenido5__paragraph"><strong>Técnica:</strong> Temple, óleo y pastel sobre cartón | <strong>Ubicación:</strong> Galería Nacional y Museo Munch, Oslo</p>
+                <p class="contenido5__paragraph">Una imagen universal del miedo, la ansiedad y la desesperación. Una figura andrógina grita mientras el cielo parece arder al fondo. Munch se inspiró en un paseo donde sintió un grito infinito atravesar la naturaleza.</p>
+                <p class="contenido5__paragraph"><strong>Reflexión:</strong> El uso de color y forma transmite una emoción pura y brutal que sigue siendo relevante en la era moderna, representando la angustia existencial que todos experimentamos. Un eco visual del malestar humano que trasciende generaciones.</p>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content container">
-            <div class="link">
-                <h3>CONTENIDO</h3>
-                <ul>
-                    <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
-                    <li><a href="Reseñas_de_peliculas.html">Reseñas de
+    <div class="product container">
+        <div class="art-card">
+            <h3>Las Meninas</h3>
+            <p class="book-author">Diego Velázquez (1656)</p>
+            <p><strong>Técnica:</strong> Óleo sobre lienzo | <strong>Ubicación:</strong> Museo del Prado, Madrid</p>
+            <p>Una obra maestra del Barroco español que no es solo un retrato de la infanta Margarita, sino un enigma visual que juega con la mirada, la perspectiva y el rol del artista. Velázquez se retrata pintando dentro de la escena, y en un espejo al fondo aparecen los reyes.</p>
+            <p><strong>Reflexión:</strong> Una reflexión sofisticada sobre la representación, el poder y el arte mismo. Un cuadro que nos obliga a preguntarnos: ¿a quién estamos realmente mirando?</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN MUSEOS -->
+<section class="product container content-section" id="museos">
+    <h2>MUSEOS EN SANTA CRUZ</h2>
+    
+    <div class="museum-card">
+        <h3>🎨 Museo Artecampo</h3>
+        <p>Especializado en arte originario y popular de las tierras bajas, preserva y exhibe textiles, cerámica, tallado en madera y arte plumario de 14 etnias del oriente boliviano.</p>
+        <div class="museum-info">
+            <p><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</p>
+            <p><strong>🎯 Destacado:</strong> Artesanía de tejidos y hamacas de comunidades originarias</p>
+            <p><strong>✨ Ideal para:</strong> Conocer expresiones culturales vivas del oriente boliviano</p>
+        </div>
+    </div>
+    
+    <div class="museum-card">
+        <h3>🦎 Museo de Historia Natural Noel Kempff Mercado</h3>
+        <p>Centro científico de referencia en Bolivia, con impresionantes colecciones de flora, fauna y paleontología. Cuenta con más de 50,000 especímenes botánicos y 135,000 insectos.</p>
+        <div class="museum-info">
+            <p><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</p>
+            <p><strong>🎯 Destacado:</strong> Aves, reptiles, mamíferos, peces y fósiles (incluido un megaterio)</p>
+            <p><strong>✨ Ideal para:</strong> Educación ambiental y científica, visitas guiadas especializadas</p>
+        </div>
+    </div>
+    
+    <div class="museum-card">
+        <h3>🖼️ Museo de Arte Contemporáneo</h3>
+        <p>Ubicado en la histórica Casa de los Tres Pavos cerca de la Plaza 24 de Septiembre. Exhibe más de 300 obras de arte boliviano contemporáneo: pintura, escultura y grabado.</p>
+        <div class="museum-info">
+            <p><strong>📍 Ubicación:</strong> Casona del siglo XX, centro de Santa Cruz</p>
+            <p><strong>🎯 Destacado:</strong> Exposiciones temporales, talleres de arte, Noche de Museos</p>
+            <p><strong>✨ Ideal para:</strong> Amantes del arte contemporáneo y eventos culturales</p>
+        </div>
+    </div>
+    
+    <div class="museum-card">
+        <h3>🏛️ Museo de Historia de Santa Cruz (UAGRM)</h3>
+        <p>Instalado en una elegante casa Art Nouveau (1915-1920). Alberga exposiciones sobre arqueología local, cultura chiquitana y archivo histórico con documentos desde el siglo XIX.</p>
+        <div class="museum-info">
+            <p><strong>📍 Ubicación:</strong> Administrado por la Universidad Gabriel René Moreno</p>
+            <p><strong>🎯 Destacado:</strong> Arquitectura Art Nouveau, biblioteca histórica</p>
+            <p><strong>✨ Ideal para:</strong> Investigadores e interesados en historia regional</p>
+        </div>
+    </div>
+    
+    <div class="museum-card">
+        <h3>📜 Museo de la Independencia</h3>
+        <p>Pequeño pero significativo museo ubicado junto a la Catedral. Presenta documentos, vestuario y objetos de la independencia cruceña en salas temáticas dedicadas al Cabildo y los Gobernadores.</p>
+        <div class="museum-info">
+            <p><strong>📍 Ubicación:</strong> Bajo el edificio de la Brigada Parlamentaria</p>
+            <p><strong>🎯 Destacado:</strong> Inaugurado en 2010, conmemora el bicentenario del 24 de septiembre</p>
+            <p><strong>✨ Ideal para:</strong> Conocer la historia de la independencia cruceña</p>
+        </div>
+    </div>
+    
+    <div class="museum-card">
+        <h3>🎭 Centro de la Cultura Plurinacional (CCP)</h3>
+        <p>Antiguo edificio bancario adaptado en 2009, funciona como extensión del Museo Nacional de Arte de La Paz. Ofrece una completa agenda cultural con múltiples disciplinas artísticas.</p>
+        <div class="museum-info">
+            <p><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</p>
+            <p><strong>🎯 Destacado:</strong> Artes visuales, teatro, danza, música, biblioteca y talleres</p>
+            <p><strong>✨ Ideal para:</strong> Disfrutar de eventos culturales diversos y exposiciones plurinacionales</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content container">
+        <div class="link">
+            <h3>CONTENIDO</h3>
+            <ul>
+                <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                <li><a href="Reseñas_de_peliculas.html">Reseñas de películas</a></li>
+                <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>RED SOCIAL</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>CONTÁCTAME</h3>
+            <ul>
+                <li><a href="https://wa.me/59171681290">+591 71681290</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function showContent(section) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(s => s.classList.remove('active'));
+        
+        const buttons = document.querySelectorAll('.sub-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        
+        document.getElementById(section).classList.add('active');
+        event.target.classList.add('active');
+        
+        window.scrollTo({
+            top: document.querySelector('.subcategory-buttons').offsetTop - 100,
+            behavior: 'smooth'
+        });
+    }
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+````
