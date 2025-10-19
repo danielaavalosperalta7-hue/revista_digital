@@ -193,4 +193,96 @@
                     popover: {
                         title: 'Salud y Bienestar 🧘',
                         description: 'Descubre consejos prácticos sobre salud física, emocional y alimentación saludable. Encuentra rutinas de ejercicio, técnicas de mindfulness y recetas nutritivas.',
-                        side:
+                        side: "bottom",
+                        align: 'start'
+                    }
+                },
+                {
+                    element: '#menu-peliculas',
+                    popover: {
+                        title: 'Reseñas de Películas 🎬',
+                        description: 'Explora reseñas de películas inspiradoras como "En busca de la felicidad", "Billy Elliot" y "La vida es bella". Historias que tocan el corazón y enseñan valiosas lecciones.',
+                        side: "bottom",
+                        align: 'center'
+                    }
+                },
+                {
+                    element: '#menu-arte',
+                    popover: {
+                        title: 'Arte y Cultura 🎨',
+                        description: 'Sumérgete en el mundo del arte con reseñas de libros inspiradores, análisis de obras maestras y una guía completa de los mejores museos en Santa Cruz.',
+                        side: "bottom",
+                        align: 'end'
+                    }
+                },
+                {
+                    element: '#imagen-bienvenida',
+                    popover: {
+                        title: 'Contenido Visual 📸',
+                        description: 'Cada sección incluye imágenes cuidadosamente seleccionadas para enriquecer tu experiencia y hacer el contenido más atractivo.',
+                        side: "left",
+                        align: 'center'
+                    }
+                },
+                {
+                    element: '#texto-bienvenida',
+                    popover: {
+                        title: 'Nuestra Misión 💡',
+                        description: 'LUMINA es un espacio donde el bienestar, la cultura y el entretenimiento se unen para aportar valor a tu vida cotidiana. Queremos inspirarte y acompañarte en tu crecimiento personal.',
+                        side: "right",
+                        align: 'center'
+                    }
+                },
+                {
+                    element: '#footer-contenido',
+                    popover: {
+                        title: 'Accesos Rápidos ⚡',
+                        description: 'En el pie de página encontrarás enlaces rápidos a todas nuestras secciones para facilitar tu navegación.',
+                        side: "top",
+                        align: 'start'
+                    }
+                },
+                {
+                    element: '#footer-redes',
+                    popover: {
+                        title: 'Síguenos en Redes 📱',
+                        description: 'Conéctate con nosotros en Instagram para más contenido exclusivo, actualizaciones y material inspirador.',
+                        side: "top",
+                        align: 'center'
+                    }
+                },
+                {
+                    element: '#footer-whatsapp',
+                    popover: {
+                        title: '¡Contáctanos! 💬',
+                        description: 'Si tienes preguntas, sugerencias o quieres compartir tus ideas, no dudes en escribirnos por WhatsApp. ¡Nos encantaría saber de ti!',
+                        side: "top",
+                        align: 'end'
+                    }
+                },
+                {
+                    popover: {
+                        title: '¡Tour Completado! 🎉',
+                        description: '¡Perfecto! Ya conoces todas las secciones de LUMINA. Ahora puedes comenzar a explorar y disfrutar del contenido. Recuerda que puedes volver a ver este tour haciendo clic en el botón "Tour" del menú.',
+                    }
+                }
+            ],
+            nextBtnText: 'Siguiente →',
+            prevBtnText: '← Anterior',
+            doneBtnText: '¡Comenzar!',
+            progressText: '{{current}} de {{total}}',
+            onDestroyStarted: () => {
+                driverObj.destroy();
+            }
+        });
+        
+        // Botón para iniciar el tour manualmente (SIN AUTOSTART)
+        document.getElementById('start-tour').addEventListener('click', (e) => {
+            e.preventDefault();
+            driverObj.drive();
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
