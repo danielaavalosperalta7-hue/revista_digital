@@ -1,139 +1,379 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Salud y bienestar - LUMINA</title>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="menu container">
-                <div class="logo-container">
-                    <a href="index.html" class="enlace">
-                        <img src="img/logo.jpg" alt="Logo LUMINA" class="logito">
-                    </a>
-                    <a href="index.html" class="logo">Lumina</a>
-                </div>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="img/menu.png" class="menu-icono" alt="menu">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
-                        <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
-                        <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud y bienestar - LUMINA</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Estilos para los subbotones */
+        .subcategory-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+        
+        .sub-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #c47535 0%, #e89a5f 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: clamp(14px, 2vw, 16px);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(196, 117, 53, 0.3);
+        }
+        
+        .sub-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(196, 117, 53, 0.5);
+            background: linear-gradient(135deg, #e89a5f 0%, #c47535 100%);
+        }
+        
+        .sub-btn.active {
+            background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+            box-shadow: 0 6px 20px rgba(44, 44, 44, 0.4);
+        }
+        
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .routine-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .routine-card h4 {
+            color: #c47535;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .food-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .food-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .food-item h4 {
+            color: #c47535;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .subcategory-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .sub-btn {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <div class="logo-container">
+                <a href="index.html" class="enlace">
+                    <img src="img/logo.jpg" alt="Logo LUMINA" class="logito">
+                </a>
+                <a href="index.html" class="logo">Lumina</a>
             </div>
-            <div class="header-content container">
-                <div class="header-img">
-                    <img src="img/saludrev.jpg" alt="Salud y Bienestar">
-                </div>
-                <div class="header-txt">
-                    <h1>SALUD Y BIENESTAR</h1>
-                    <button class="btn-volver" onclick="window.location.href='Inicio.html'">
-                        Volver al Menú
-                    </button>
-                </div>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                    <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
+                    <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="img/saludrev.jpg" alt="Salud y Bienestar">
             </div>
-        </header>
+            <div class="header-txt">
+                <h1>SALUD Y BIENESTAR</h1>
+                <button class="btn-volver" onclick="window.location.href='index.html'">
+                    Volver al Menú
+                </button>
+            </div>
+        </div>
+    </header>
 
-        <main class="product container" id="list-1">
-            <h2>CONSEJOS</h2>
-            <div class="product-content">
-                <div class="product">
-                    <div class="product-txt">
-                        <h3>Cuida tus pensamientos</h3>
-                        <p>Practica la autocompasión: háblate con amabilidad,
-                            como lo harías con un buen amigo.
-                            Detecta y cuestiona los pensamientos negativos
-                            automáticos: pregúntate si son realmente ciertos o
-                            si hay otra forma de ver la situación.
-                        </p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-txt">
-                        <h3>Prioriza tu descanso y energía</h3>
-                        <p>Duerme lo suficiente (7-9 horas).</p>
-                        <p>Dedica tiempo a descansar sin sentir culpa.</p>
-                        <p>Haz pausas durante el día para respirar
-                            profundamente y relajarte.</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-txt">
-                        <h3>Mantén conexiones sociales</h3>
-                        <p>Haz ejercicio regularmente (caminar, bailar,
-                            estirarte... lo que disfrutes).
-                            Mantén una alimentación balanceada que te haga
-                            sentir bien.
-                            Evita el exceso de sustancias como alcohol o
-                            cafeína, que pueden afectar el ánimo.
-                        </p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-txt">
-                        <h3>Organiza tu tiempo</h3>
-                        <p>Aprende a decir "no" cuando lo necesites.
-                            Establece metas pequeñas y realistas.
-                            Reserva momentos para actividades que te aporten
-                            alegría o calma (leer, pintar, escuchar música,
-                            etc.).
-                        </p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-txt">
-                        <h3>Conecta con el presente</h3>
-                        <p>Practica técnicas de atención plena (mindfulness,
-                            meditación, respiración consciente).
-                            Pasea al aire libre, observa la naturaleza,
-                            desconéctate de pantallas por un rato.
-                        </p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-txt">
-                        <h3>Expresa lo que sientes</h3>
-                        <p>Escribe un diario o notas sobre tus emociones.
-                            Usa el arte o la música como vías para expresar lo
-                            que no sabes poner en palabras.
-                        </p>
-                    </div>
+    <!-- Botones de subcategorías -->
+    <div class="subcategory-buttons">
+        <button class="sub-btn active" onclick="showContent('fisica')">Salud Física</button>
+        <button class="sub-btn" onclick="showContent('emocional')">Salud Emocional</button>
+        <button class="sub-btn" onclick="showContent('alimentacion')">Alimentación Saludable</button>
+    </div>
+
+    <!-- Contenido Salud Física -->
+    <main class="product container content-section active" id="fisica">
+        <h2>SALUD FÍSICA</h2>
+        <div class="product-content">
+            <div class="routine-card">
+                <h4>🏃 Rutina Cardiovascular</h4>
+                <p><strong>Duración:</strong> 30 minutos diarios</p>
+                <p>• Caminar rápido o trotar (15 min)</p>
+                <p>• Saltar la cuerda (5 min)</p>
+                <p>• Bicicleta o natación (10 min)</p>
+                <p><strong>Beneficios:</strong> Mejora la salud del corazón, aumenta la resistencia y ayuda a controlar el peso.</p>
+            </div>
+            
+            <div class="routine-card">
+                <h4>💪 Rutina de Fuerza</h4>
+                <p><strong>Frecuencia:</strong> 3 veces por semana</p>
+                <p>• Flexiones (3 series de 12)</p>
+                <p>• Sentadillas (3 series de 15)</p>
+                <p>• Planchas (3 series de 30 seg)</p>
+                <p>• Abdominales (3 series de 20)</p>
+                <p><strong>Beneficios:</strong> Fortalece músculos, mejora la postura y aumenta el metabolismo.</p>
+            </div>
+            
+            <div class="routine-card">
+                <h4>🧘 Rutina de Flexibilidad</h4>
+                <p><strong>Duración:</strong> 15 minutos diarios</p>
+                <p>• Estiramientos de cuello y hombros (3 min)</p>
+                <p>• Yoga o pilates (10 min)</p>
+                <p>• Respiración profunda (2 min)</p>
+                <p><strong>Beneficios:</strong> Reduce el estrés, mejora la flexibilidad y previene lesiones.</p>
+            </div>
+        </div>
+        
+        <div class="product-content" style="margin-top: 30px;">
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Mantente Activo</h3>
+                    <p>Realiza al menos 150 minutos de actividad física moderada por semana. Encuentra actividades que disfrutes para mantener la constancia.</p>
                 </div>
             </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-content container">
-                <div class="link">
-                    <h3>CONTENIDO</h3>
-                    <ul>
-                        <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
-                        <li><a href="Reseñas_de_peliculas.html">Reseñas de peliculas</a></li>
-                        <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h3>RED SOCIAL</h3>
-                    <ul>
-                        <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h3>CONTACTAME</h3>
-                    <ul>
-                        <li><a href="https://wa.me/71681290">71681290</a></li>
-                    </ul>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Descanso Adecuado</h3>
+                    <p>Duerme entre 7-9 horas diarias. Un buen descanso es esencial para la recuperación muscular y el bienestar general.</p>
                 </div>
             </div>
-        </footer>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Hidratación</h3>
+                    <p>Bebe al menos 2 litros de agua al día. La hidratación adecuada mejora el rendimiento físico y la salud general.</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-        <script src="script.js"></script>
-    </body>
+    <!-- Contenido Salud Emocional -->
+    <main class="product container content-section" id="emocional">
+        <h2>SALUD EMOCIONAL</h2>
+        <div class="product-content">
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Cuida tus Pensamientos</h3>
+                    <p>Practica la autocompasión: háblate con amabilidad, como lo harías con un buen amigo. Detecta y cuestiona los pensamientos negativos automáticos: pregúntate si son realmente ciertos o si hay otra forma de ver la situación.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Prioriza tu Descanso</h3>
+                    <p>Duerme lo suficiente (7-9 horas). Dedica tiempo a descansar sin sentir culpa. Haz pausas durante el día para respirar profundamente y relajarte.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Mantén Conexiones Sociales</h3>
+                    <p>Cultiva relaciones significativas con amigos y familia. Comparte tus sentimientos con personas de confianza. Participa en actividades grupales que disfrutes.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Organiza tu Tiempo</h3>
+                    <p>Aprende a decir "no" cuando lo necesites. Establece metas pequeñas y realistas. Reserva momentos para actividades que te aporten alegría o calma.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Conecta con el Presente</h3>
+                    <p>Practica mindfulness y meditación diaria. Pasea al aire libre, observa la naturaleza. Desconéctate de pantallas por momentos.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Expresa tus Emociones</h3>
+                    <p>Escribe un diario sobre tus emociones. Usa el arte o la música como vías de expresión. No reprimas lo que sientes, busca formas saludables de liberarlo.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contenido Alimentación Saludable -->
+    <main class="product container content-section" id="alimentacion">
+        <h2>ALIMENTACIÓN SALUDABLE</h2>
+        
+        <div class="food-grid">
+            <div class="food-item">
+                <h4>🥑 Aguacate</h4>
+                <p><strong>Beneficios:</strong> Rico en grasas saludables, mejora la salud cardiovascular, proporciona vitaminas E y K.</p>
+                <p><strong>Sugerencia:</strong> Añádelo a ensaladas, tostadas o smoothies.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🥦 Brócoli</h4>
+                <p><strong>Beneficios:</strong> Alto en fibra, vitaminas C y K, antioxidantes que fortalecen el sistema inmune.</p>
+                <p><strong>Sugerencia:</strong> Al vapor con limón o salteado con ajo.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🐟 Salmón</h4>
+                <p><strong>Beneficios:</strong> Omega-3 para la salud cerebral y cardíaca, proteínas de alta calidad.</p>
+                <p><strong>Sugerencia:</strong> A la plancha con verduras o al horno con hierbas.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🫐 Arándanos</h4>
+                <p><strong>Beneficios:</strong> Potentes antioxidantes, mejoran la memoria y protegen contra el envejecimiento.</p>
+                <p><strong>Sugerencia:</strong> En yogur, avena o como snack natural.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🥜 Frutos Secos</h4>
+                <p><strong>Beneficios:</strong> Proteínas, grasas saludables, energía duradera y control del apetito.</p>
+                <p><strong>Sugerencia:</strong> Un puñado como snack entre comidas.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🍠 Batata</h4>
+                <p><strong>Beneficios:</strong> Carbohidratos complejos, vitamina A, fibra que regula el azúcar en sangre.</p>
+                <p><strong>Sugerencia:</strong> Horneada, en puré o como chips saludables.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🥬 Espinaca</h4>
+                <p><strong>Beneficios:</strong> Hierro, calcio, vitaminas A y C, fortalece huesos y músculos.</p>
+                <p><strong>Sugerencia:</strong> En ensaladas, smoothies verdes o salteada.</p>
+            </div>
+            
+            <div class="food-item">
+                <h4>🥚 Huevos</h4>
+                <p><strong>Beneficios:</strong> Proteína completa, colina para la función cerebral, vitaminas del grupo B.</p>
+                <p><strong>Sugerencia:</strong> Hervidos, revueltos o en tortilla con vegetales.</p>
+            </div>
+        </div>
+        
+        <div class="product-content" style="margin-top: 40px;">
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Balance Nutricional</h3>
+                    <p>Incluye todos los grupos alimenticios en tus comidas: proteínas, carbohidratos complejos, grasas saludables, vitaminas y minerales.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Hidratación Constante</h3>
+                    <p>Bebe agua regularmente durante el día. Limita el consumo de bebidas azucaradas y opta por agua, infusiones o agua con frutas naturales.</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-txt">
+                    <h3>Come Conscientemente</h3>
+                    <p>Disfruta cada bocado sin distracciones. Come despacio, mastica bien y escucha las señales de saciedad de tu cuerpo.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>CONTENIDO</h3>
+                <ul>
+                    <li><a href="Salud_y_bienestar.html">Salud y bienestar</a></li>
+                    <li><a href="Reseñas_de_peliculas.html">Reseñas de películas</a></li>
+                    <li><a href="Arte_y_cultura.html">Arte y cultura</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>RED SOCIAL</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/daniela_avalos_03?igsh=MXEyZjZraDUzNGZhbg==">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>CONTÁCTAME</h3>
+                <ul>
+                    <li><a href="https://wa.me/59171681290">+591 71681290</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            // Remover clase active de todos los botones
+            const buttons = document.querySelectorAll('.sub-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            // Mostrar sección seleccionada
+            document.getElementById(section).classList.add('active');
+            
+            // Activar botón correspondiente
+            event.target.classList.add('active');
+            
+            // Scroll suave a la sección
+            window.scrollTo({
+                top: document.querySelector('.subcategory-buttons').offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
 </html>
