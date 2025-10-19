@@ -7,7 +7,6 @@
     <title>Salud y bienestar - LUMINA</title>
     <link rel="stylesheet" href="estilo.css">
     <style>
-        /* Estilos para los subbotones */
         .subcategory-buttons {
             display: flex;
             justify-content: center;
@@ -145,7 +144,6 @@
         </div>
     </header>
 
-    <!-- Botones de subcategorías -->
     <div class="subcategory-buttons">
         <button class="sub-btn active" onclick="showContent('fisica')">Salud Física</button>
         <button class="sub-btn" onclick="showContent('emocional')">Salud Emocional</button>
@@ -353,21 +351,15 @@
 
     <script>
         function showContent(section) {
-            // Ocultar todas las secciones
             const sections = document.querySelectorAll('.content-section');
             sections.forEach(s => s.classList.remove('active'));
             
-            // Remover clase active de todos los botones
             const buttons = document.querySelectorAll('.sub-btn');
             buttons.forEach(b => b.classList.remove('active'));
             
-            // Mostrar sección seleccionada
             document.getElementById(section).classList.add('active');
-            
-            // Activar botón correspondiente
             event.target.classList.add('active');
             
-            // Scroll suave a la sección
             window.scrollTo({
                 top: document.querySelector('.subcategory-buttons').offsetTop - 100,
                 behavior: 'smooth'
@@ -375,5 +367,3 @@
         }
     </script>
     <script src="script.js"></script>
-</body>
-</html>
